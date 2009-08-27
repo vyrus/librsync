@@ -1,0 +1,66 @@
+Source: librsync
+Section: libs
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends:
+ debhelper (>= 7.0.50~), autotools-dev, libbz2-dev, libpopt-dev, zlib1g-dev,
+ quilt
+Standards-Version: 3.8.3
+Homepage: http://librsync.sourceforge.net/
+
+Package: librsync1
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: rsync remote-delta algorithm library
+ librsync implements the rsync remote-delta algorithm, which allows for
+ efficient remote updates of a file, without requiring the old and new versions
+ to both be present at the transmitter. The library uses a stream-based designed
+ so that it can be easily embedded into network applications.
+ .
+ The main application at the moment is rproxy, but the library should eventually
+ be generally useful.
+
+Package: librsync-dev
+Section: libdevel
+Architecture: any
+Depends:
+ ${misc:Depends}, librsync1 (= ${binary:Version}), libbz2-dev, libpopt-dev,
+ zlib1g-dev
+Description: rsync remote-delta algorithm library (development)
+ librsync implements the rsync remote-delta algorithm, which allows for
+ efficient remote updates of a file, without requiring the old and new versions
+ to both be present at the transmitter. The library uses a stream-based designed
+ so that it can be easily embedded into network applications.
+ .
+ This package contains the development files.
+
+Package: librsync-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends:
+ ${misc:Depends}, librsync1 (= ${binary:Version}),
+ librsync-dev (= ${binary:Version})
+Description: rsync remote-delta algorithm library (debug)
+ librsync implements the rsync remote-delta algorithm, which allows for
+ efficient remote updates of a file, without requiring the old and new versions
+ to both be present at the transmitter. The library uses a stream-based designed
+ so that it can be easily embedded into network applications.
+ .
+ This package contains the debugging symbols.
+
+Package: rdiff
+Section: utils
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Binary diff tool for signature-based differences
+ rdiff is a little like diff and patch all rolled into one, with support for
+ binary files. Since it takes advantage of the rsync remote-delta algorithm, you
+ do not need the source file in the same place as your destination file.
+ .
+ To use it, you generate a "signature" of the original file and copy the
+ signature (which is very small) to the same location as the modified file. Then
+ you generate a "delta" which describes the changes required to turn the source
+ file into the modified file. The small delta file can then be used to "patch"
+ the original file, to transform it into the modified file.
