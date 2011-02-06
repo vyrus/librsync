@@ -17,8 +17,7 @@ Description: rsync remote-delta algorithm library
  to both be present at the transmitter. The library uses a stream-based designed
  so that it can be easily embedded into network applications.
  .
- The main application at the moment is rproxy, but the library should eventually
- be generally useful.
+ librsync is used by rdiff-backup and duplicity backup applications.
 
 Package: librsync-dev
 Section: libdevel
