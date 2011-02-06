@@ -1,7 +1,7 @@
 Source: librsync
 Section: libs
 Priority: optional
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Andrey Rahmatullin <wrar@wrar.name>
 Build-Depends:
  debhelper (>= 7.0.50~), autotools-dev, libbz2-dev, libpopt-dev, zlib1g-dev
 Standards-Version: 3.8.3
