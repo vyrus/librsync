@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Andrey Rahmatullin <wrar@wrar.name>
 Build-Depends:
- debhelper (>= 7.0.50~), autotools-dev, libbz2-dev, libpopt-dev, zlib1g-dev
+ debhelper (>= 8), autotools-dev, libbz2-dev, libpopt-dev, zlib1g-dev
 Standards-Version: 3.9.1
 Homepage: http://librsync.sourceforge.net/
 
