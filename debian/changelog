@@ -1,3 +1,15 @@
+librsync (0.9.7-8) unstable; urgency=low
+
+  * Adopt the package (Closes: #543849).
+  * Bump Standards-Version to 3.9.1 (no change needed).
+  * Change source format to 3.0 (quilt).
+  * Use autotools_dev debhelper addon instead of manual file copying.
+  * Enable -Wl,--as-needed.
+  * Remove unused compression-related rdiff options (Closes: #608470).
+  * Do not build and install the static library.
+
+ -- Andrey Rahmatullin <wrar@wrar.name>  Tue, 08 Feb 2011 03:44:38 +0500
+
 librsync (0.9.7-7) unstable; urgency=low
 
   * Updating package to standards version 3.8.3.
