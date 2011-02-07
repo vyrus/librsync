@@ -6,11 +6,11 @@ export LDFLAGS=-Wl,--as-needed
 	dh ${@} --with autotools_dev
 
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-shared CFLAGS="$(CFLAGS) -D_LARGEFILE_SOURCE"
+	dh_auto_configure -- --enable-shared --disable-static CFLAGS="$(CFLAGS) -D_LARGEFILE_SOURCE"
 
 override_dh_auto_install:
 	$(MAKE) prefix=$(CURDIR)/debian/tmp/usr install
-
+	rm -f $(CURDIR)/debian/tmp/usr/lib/*.la
 	install -D -m 0755 .libs/rdiff debian/tmp/usr/bin/rdiff
 
 override_dh_install:
