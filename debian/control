@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Andrey Rahmatullin <wrar@wrar.name>
 Build-Depends:
  debhelper (>= 8), autotools-dev, libbz2-dev, libpopt-dev, zlib1g-dev
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://librsync.sourceforge.net/
 Vcs-Git: git://git.debian.org/collab-maint/librsync.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/librsync.git;a=summary

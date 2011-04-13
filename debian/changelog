@@ -1,7 +1,7 @@
 librsync (0.9.7-8) unstable; urgency=low
 
   * Adopt the package (Closes: #543849).
-  * Bump Standards-Version to 3.9.1 (no change needed).
+  * Bump Standards-Version to 3.9.2 (no change needed).
   * Change source format to 3.0 (quilt).
   * Use autotools_dev debhelper addon instead of manual file copying.
   * Enable -Wl,--as-needed.
