@@ -9,7 +9,7 @@ librsync (0.9.7-8) unstable; urgency=low
   * Do not build and install the static library.
   * Do not install librsync.la (Closes: #622495)
 
- -- Andrey Rahmatullin <wrar@wrar.name>  Tue, 08 Feb 2011 03:44:38 +0500
+ -- Andrey Rahmatullin <wrar@wrar.name>  Wed, 13 Apr 2011 12:37:41 +0600
 
 librsync (0.9.7-7) unstable; urgency=low
 
