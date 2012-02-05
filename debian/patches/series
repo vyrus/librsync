@@ -2,3 +2,4 @@
 02-4gb.patch
 03-getopt.patch
 04-format-security.patch
+05-implicit-declaration.patch
