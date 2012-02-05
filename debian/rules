@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 export LDFLAGS=-Wl,--as-needed
 
 %:
@@ -13,7 +15,7 @@ override_dh_auto_configure:
 
 override_dh_auto_install:
 	$(MAKE) prefix=$(CURDIR)/debian/tmp/usr install
-	rm -f $(CURDIR)/debian/tmp/usr/lib/*.la
+	rm -f $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/*.la
 	install -D -m 0755 .libs/rdiff debian/tmp/usr/bin/rdiff
 
 override_dh_install:

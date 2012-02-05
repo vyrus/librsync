@@ -3,7 +3,7 @@ Section: libs
 Priority: optional
 Maintainer: Andrey Rahmatullin <wrar@wrar.name>
 Build-Depends:
- debhelper (>= 8), dh-autoreconf (>= 4~), libbz2-dev, libpopt-dev, zlib1g-dev
+ debhelper (>= 9), dh-autoreconf (>= 4~), libbz2-dev, libpopt-dev, zlib1g-dev
 Standards-Version: 3.9.2
 Homepage: http://librsync.sourceforge.net/
 Vcs-Git: git://git.debian.org/collab-maint/librsync.git
@@ -11,6 +11,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/librsync.git;a=summary
 
 Package: librsync1
 Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: rsync remote-delta algorithm library
  librsync implements the rsync remote-delta algorithm, which allows for
