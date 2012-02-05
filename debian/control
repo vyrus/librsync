@@ -11,6 +11,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/librsync.git;a=summary
 
 Package: librsync1
 Architecture: any
+Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: rsync remote-delta algorithm library
