@@ -1,8 +1,13 @@
-librsync (0.9.7-9) UNRELEASED; urgency=low
+librsync (0.9.7-9) unstable; urgency=low
 
-  * Use dh_autoreconf --as-needed instead of autotools-dev
+  * Switch to debhelper v9.
+  * Use dh_autoreconf --as-needed instead of autotools-dev to fix rpath build
+    issue with the multiarch path and reduce librsync1 deps.
+  * Fix a format-security warning.
+  * Fix an implicit-function-declaration warning in the test suite.
+  * Set Multi-Arch: same for librsync1.
 
- -- Andrey Rahmatullin <wrar@wrar.name>  Sat, 04 Feb 2012 16:49:00 +0600
+ -- Andrey Rahmatullin <wrar@wrar.name>  Sun, 05 Feb 2012 14:56:17 +0600
 
 librsync (0.9.7-8) unstable; urgency=low
 
