@@ -2,7 +2,7 @@
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
-export LDFLAGS=-Wl,--as-needed
+export DEB_LDFLAGS_MAINT_APPEND=-Wl,--as-needed
 
 %:
 	dh ${@} --with autoreconf
