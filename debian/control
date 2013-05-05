@@ -42,8 +42,7 @@ Priority: extra
 Architecture: any
 Multi-Arch: same
 Depends:
- ${misc:Depends}, librsync1 (= ${binary:Version}),
- librsync-dev (= ${binary:Version})
+ ${misc:Depends}, librsync1 (= ${binary:Version})
 Description: rsync remote-delta algorithm library (debug)
  librsync implements the rsync remote-delta algorithm, which allows for
  efficient remote updates of a file, without requiring the old and new versions
