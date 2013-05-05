@@ -40,6 +40,7 @@ Package: librsync-dbg
 Section: debug
 Priority: extra
 Architecture: any
+Multi-Arch: same
 Depends:
  ${misc:Depends}, librsync1 (= ${binary:Version}),
  librsync-dev (= ${binary:Version})
