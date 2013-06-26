@@ -1,3 +1,16 @@
+librsync (0.9.7-10) unstable; urgency=low
+
+  * Do not overwrite LDFLAGS from dpkg-buildflags.
+  * Add debian/watch, written by Bart Martens.
+  * Make the debug subpackage Multi-Arch: same.
+  * Use canonical URLs in Vcs-*.
+  * Use http://sf.net/ in debian/watch instead of the redirector URL.
+  * Remove the dependency on -dev from -dbg.
+  * Fix tests with new automake (Closes: #713443).
+  * Bump Standards-Version to 3.9.4.
+
+ -- Andrey Rahmatullin <wrar@wrar.name>  Thu, 27 Jun 2013 00:38:54 +0600
+
 librsync (0.9.7-9) unstable; urgency=low
 
   * Switch to debhelper v9.
